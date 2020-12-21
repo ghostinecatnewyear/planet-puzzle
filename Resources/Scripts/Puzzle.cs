@@ -405,7 +405,7 @@ public class Puzzle : MonoBehaviour
             case 24:
                 return 30.0f;
             case 96:
-                return 20.0f;
+                return 15.0f;
         }
     }
 
