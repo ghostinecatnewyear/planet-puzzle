@@ -125,6 +125,7 @@ public class PlanetPuzzle : MonoBehaviour
 
         planetOutline.transform.position = transform.position;
         planetOutline.transform.rotation = transform.rotation;
+        planetOutline.transform.localScale = new Vector3(0.96f, 0.96f, 0.96f);
 
         SetRotatable(planetOutline);
 
@@ -176,7 +177,7 @@ public class PlanetPuzzle : MonoBehaviour
 
     private Vector3 CountPieceFitOnPos()
     {
-        var outlineBounds = planetOutline.GetComponent<MeshFilter>().mesh.bounds.size.x * transform.localScale.x;
+        var outlineBounds = planetOutline.GetComponent<MeshFilter>().mesh.bounds.size.x;
         var currentPos = transform.position;
 
         return (new Vector3(currentPos.x, currentPos.y, currentPos.z - (outlineBounds / 2)));
